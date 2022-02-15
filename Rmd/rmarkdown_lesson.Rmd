@@ -49,3 +49,10 @@ bg_chem <- read.csv("../data/BGchem2008data.csv")
 plot(bg_chem$CTD_Depth, bg_chem$CTD_Temperature)
 ```
 
+# Discussion
+
+This is where I would enter interesting things.
+
+# References
+
+Cool references here.
