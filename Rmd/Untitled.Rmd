@@ -1,0 +1,36 @@
+---
+title: "Geospatial Analysis"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, warning = FALSE, message = FALSE}
+library(sf)
+library(ggplot2)
+library(leaflet)
+library(scales)
+library(ggmap)
+library(dplyr)
+```
+
+```{r}
+ak_regions <- read_sf("shapefiles/ak_regions_simp.shp")
+
+
+```
+
+```{r}
+ak_regions_3338 <- ak_regions %>% 
+  st_transform(crs = 3338)
+
+plot(ak_regions_3338)
+```
+```{r}
+pop <- read.csv("shapefiles/alaska_population.csv")
+
+head(pop)
+```
+
